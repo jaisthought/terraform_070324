@@ -19,3 +19,11 @@ resource "aws_instance" myserver1 {
     Name = "Dev1" 
   } 
 } 
+
+output "instance_ami" {  
+  value = aws_instance.myserver1.ami
+}  
+
+output "instance_arn" {  
+  value = aws_instance.myserver1.arn 
+}  
