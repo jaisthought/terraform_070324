@@ -6,3 +6,12 @@ resource "aws_instance" myserver1 {
     Name = "Dev1" 
   } 
 } 
+
+resource "aws_s3_bucket" "MyBucket" {
+  bucket = "my-tf-test-bucket-070324"
+
+  tags = {
+    Name        = "My bucket"
+    Environment = "Dev"
+  }
+}
